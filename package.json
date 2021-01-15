@@ -8,8 +8,9 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
+    "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.8",
+    "iota-identity-wasm-test": "0.0.13",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "ncp './node_modules/iota-identity-wasm-test/web/iota_identity_wasm_bg.wasm' './public/iota_identity_wasm_bg.wasm' &&  react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0"
   }
 }

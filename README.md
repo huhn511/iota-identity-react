@@ -2,6 +2,37 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## IOTA Identity
+
+
+### How to setup net react project with typescript and IOTA Identity.
+
+https://create-react-app.dev/
+```
+npx create-react-app iota-identity-react --template typescript
+```
+
+```
+npm install iota-identity-wasm-test
+```
+
+You need to make the WASM file Available for the application, so you need to copy the file to the public directory.
+
+```
+"build": "ncp 'node_modules/iota-identity-wasm-test/web/iota_identity_wasm_bg.wasm' './public/iota_identity_wasm_bg.wasm' &&  react-scripts build",
+```
+
+Also install ncp, to this script above will work.
+```
+npm install ncp --save-dev
+```
+
+Just add your Identity code and enjoy your react app.
+```
+npm start
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:

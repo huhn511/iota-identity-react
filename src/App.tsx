@@ -2,6 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import * as identity from "iota-identity-wasm-test/web/";
+
+(async () => {
+  await identity.init()
+  let keyPair = identity.Key.generateEd25519();
+  console.log("keyPair", keyPair);
+  let did = new identity.DID(keyPair);
+  console.log("did", did);
+})();
+
+
 function App() {
   return (
     <div className="App">
